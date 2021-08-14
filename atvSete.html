@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+
+<script>
+
+  function pulaLinha() {
+    document.write("<br>");
+  }
+
+  function mostra(frase) {
+
+    document.write(frase);
+    pulaLinha();
+  }
+
+  var n = parseInt(prompt("Digite o tamanho da sequencia"));
+  var mdc = parseInt(prompt("Entre com o 1 numero da sequencia"))
+  var i = 1;
+
+  while (i < n) {
+    var numero = parseInt(prompt("Entre com o " + (i+1) + " da sequencia"))
+    i++;
+    var divisor=1;
+    while (divisor <= mdc && divisor<= numero) {
+      if (mdc % divisor == 0 && numero % divisor == 0) {
+          var novoDmc= divisor;
+      }
+      divisor++;
+    }
+    mdc = novoDmc;
+  }
+
+  mostra("MCD = " + novoDmc);
+
+</script>

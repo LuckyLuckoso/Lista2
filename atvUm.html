@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+    var lista = parseInt(prompt("Digite um valor seguido de 0"));
+    var soma = 0;
+    for(var k = 1; k<= lista;k++){
+      if (k % 2 == 0) {
+        soma = soma + k;
+      }
+    }
+    mostra(soma);
+  </script>

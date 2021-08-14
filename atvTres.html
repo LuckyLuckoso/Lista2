@@ -1,0 +1,41 @@
+<meta charset="UTF-8">
+
+<script>
+
+  function pulaLinha() {
+    document.write("<br>");
+  }
+
+  function mostra(frase) {
+
+    document.write(frase);
+    pulaLinha();
+  }
+
+
+  var n = parseInt(prompt("Digite o valor de N"));
+  var m = parseInt(prompt("Digite o valor de M"));;
+  var x = 0;
+  var y = 0;
+  var valor = 0;
+  var xMax = 0;
+  var yMax = 0;
+  var valorMax = 0;
+
+  for (x = 0; x <= n; x++)
+  {
+    for (y = 0; y <= m; y++)
+    {
+      valor = x*y - x*x + y;
+      if (valor > valorMax)
+      {
+        valorMax = valor;
+        xMax = x;
+        yMax = y;
+      }
+    }
+  }
+  mostra("Valor maximo da funcao = " + valorMax + " foi alcancado com x = " + xMax + " e y = "+yMax);
+
+
+</script>

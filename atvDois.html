@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var comprimento = parseInt(prompt("Digite o comprimento maximo da hipotenusa"));
+    for(hipotenusa = 1; hipotenusa <= comprimento; hipotenusa++){
+      var aux = 1;
+        for(cateto1 = 1; cateto1 < hipotenusa+; cateto1++){
+          cateto2 = cateto1;
+          while(cateto1*cateto1 + cateto2*cateto2 < hipotenusa*hipotenusa){
+            cateto2++;
+          }
+          if (cateto1*cateto1 + cateto2*cateto2 == hipotenusa*hipotenusa) {
+            mostra("hipotenusa " + hipotenusa + " catetos " + cateto1 + " e " + cateto2 );
+            aux = 2;
+          }
+        }
+    }
+  </script>
